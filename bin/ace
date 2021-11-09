@@ -1,0 +1,38 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * This is a simple binary that searches for a horizon application's root directory and invokes the application in
+ * console mode.
+ */
+
+function getProjectRoot() {
+	$path = getcwd();
+
+	while (true) {
+		$target = $path . DIRECTORY_SEPARATOR . 'vendor';
+
+		if (is_dir($target)) {
+			return $path;
+		}
+
+		if (($nextPath = dirname($path)) === $path) {
+			echo "No vendor directory found! Have you run `composer install`?";
+			exit(1);
+		}
+
+		$path = $nextPath;
+	}
+}
+
+$root = getProjectRoot();
+$vendor = $root . '/vendor/autoload.php';
+
+require $vendor;
+
+if (!class_exists('Horizon\Foundation\Bootstrapper')) {
+	echo "No compatible version of `baileyherbert/horizon` was found.";
+	exit(1);
+}
+
+Horizon\Foundation\Bootstrapper::startConsoleApplication(getcwd());

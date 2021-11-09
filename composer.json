@@ -1,0 +1,26 @@
+{
+	"name": "baileyherbert/ace",
+	"description": "A simple command line bootstrapper for the Horizon Framework.",
+	"support": {
+        "issues": "https://github.com/baileyherbert/horizon/issues",
+        "source": "https://github.com/baileyherbert/horizon"
+	},
+	"authors": [
+		{
+			"name": "Bailey Herbert",
+			"email": "hello@bailey.sh",
+			"homepage": "https://bailey.sh/"
+		}
+	],
+    "bin": [
+        "bin/ace"
+    ],
+    "require": {
+        "php": ">=5.6.0"
+	},
+	"archive": {
+		"exclude": [
+            "/.git*"
+		]
+	}
+}

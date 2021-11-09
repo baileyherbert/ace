@@ -1,0 +1,6 @@
+.DS_Store
+.cache
+Thumbs.db
+/vendor/
+/.vs
+/.idea
