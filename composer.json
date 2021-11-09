@@ -1,6 +1,7 @@
 {
 	"name": "baileyherbert/ace",
 	"description": "A simple command line bootstrapper for the Horizon Framework.",
+	"license": "MIT",
 	"support": {
         "issues": "https://github.com/baileyherbert/horizon/issues",
         "source": "https://github.com/baileyherbert/horizon"
