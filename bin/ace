@@ -35,4 +35,4 @@ if (!class_exists('Horizon\Foundation\Bootstrapper')) {
 	exit(1);
 }
 
-Horizon\Foundation\Bootstrapper::startConsoleApplication(getcwd());
+Horizon\Foundation\Bootstrapper::startConsoleApplication($root);
