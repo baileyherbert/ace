@@ -17,7 +17,7 @@ function getProjectRoot() {
 		}
 
 		if (($nextPath = dirname($path)) === $path) {
-			echo "No vendor directory found! Have you run `composer install`?";
+			echo "No vendor directory found! Have you run `composer install`?" . PHP_EOL;
 			exit(1);
 		}
 
@@ -31,7 +31,7 @@ $vendor = $root . '/vendor/autoload.php';
 require $vendor;
 
 if (!class_exists('Horizon\Foundation\Bootstrapper')) {
-	echo "No compatible version of `baileyherbert/horizon` was found.";
+	echo "No compatible version of `baileyherbert/horizon` was found." . PHP_EOL;
 	exit(1);
 }
 
